@@ -2,18 +2,17 @@
 
 var path = require('path'),
     rootPath = path.normalize(__dirname + '/../..');
-
 module.exports = {
     /** Global definition * */
     app: {
         /* Page title */
-        title: 'Sv Stock',
+        title: 'SV Stock',
         /* Page description */
-        description: 'Sv Stock',
+        description: 'SV Stock',
         /* Webroot URL */
         webroot: '/sv-stock',
 		
-        keywords: 'directv, sds, node.js'
+        keywords: 'node.js'
     },
     /* System root path */
     root: rootPath,
@@ -44,10 +43,17 @@ module.exports = {
 	
 	/* Character set */
 	charset: 'utf8',
-	
+    
 	/* Admin User */
 	user : {
 		username : 'admin', 
-		passwd : 'directv'
-	}
+		passwd : '123456'
+	},
+	
+    /** REST API **/
+    /* server id */
+    serverId: '192.168.211.11:8080',
+
+    /* server name */
+    serverName: '/api/api/',
 };

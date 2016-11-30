@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} {% block content %}
+<script type="text/javascript" src="{{webroot}}/js/scheduler.js"></script>
+<section id="main">	
+	<div class="proc_content">
+		<fieldset>
+			<legend> Content Process </legend>	
+			<button type="button" class="btn btn-success btn-proc" data-type="content" data-value="ENABLE">Enable</button>
+			<button type="button" class="btn btn-success btn-proc" data-type="content" data-value="DISABLE">Disable</button>
+			<button type="button" class="btn btn-success btn-proc" data-type="content" data-value="RESTART">Restart</button>
+			<button type="button" class="btn btn-success btn-proc" data-type="content" data-value="STOP">Stop</button>
+		</fieldset>
+	</div>
+
+</section>
+<script type="text/javascript">
+	var serverId = "{{serverId}}";
+	var serverName = "{{serverName}}";
+	var active_menu = "scheduler";
+</script>
+{% endblock %}

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
 'use strict';
 
 /**
@@ -20,11 +15,7 @@ var express = require('express'),
     nunjucks = require('nunjucks'),
     path = require('path'),
 	logger =  require('winston').loggers.get('application'),
-<<<<<<< HEAD
-	//couchbase = require('couchbase'),
-=======
-	// couchbase = require('couchbase'),
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
+	couchbase = require('couchbase'),
 	config = require('./config'),
 	utilities = require('./utilities');
 
@@ -43,7 +34,7 @@ module.exports = function() {
     app.use(function(req, res, next) {
         res.locals.url = req.protocol + ':// ' + req.headers.host + req.url;
         next();
-    });
+    });  
 
     // Should be placed before express.static
     app.use(compression({
@@ -75,15 +66,9 @@ module.exports = function() {
         app.set('view cache', false);
     }
 
-    // Application Configuration for production environment
-    if('production' == process.env.NODE_ENV) {
-        app.locals({
-            cache: 'memory' // To solve SWIG Cache Issues
-        });
-    }
 	// Init database
 	// var cluster = new couchbase.Cluster('couchbase://' + config.couchbase.server);
-	// var bucket = cluster.openBucket(config.couchbase.bucket, config.couchbase.password, function(err) {
+	// var couchbaseBucket = cluster.openBucket(config.couchbase.bucket, config.couchbase.password, function(err) {
  //    	if (err) {
  //        	console.error('Got error: %j', err);
  //    	} else {
@@ -91,9 +76,10 @@ module.exports = function() {
 	// 	}
  //    }); 
 	
+	//global.bucket = couchbaseBucket;
     // request body parsing middleware should be above methodOverride
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false, limit : '50mb' }));
+    app.use(bodyParser.json({limit : '50mb'}));
     app.use(methodOverride());
 
     // Enable jsonp
@@ -118,6 +104,7 @@ module.exports = function() {
 
     // Setting the app router and static folder
     app.use(config.app.webroot, express.static(config.root + '/public'));
+    app.use(config.app.webroot, express.static(config.root + '/' + config.manifestdir));
 
     // Load Routes
     utilities.walk('./app/routes', /(.*)\.(js$|coffee$)/).forEach(function(routePath) {
@@ -149,14 +136,3 @@ module.exports = function() {
 	
     return app;
 };
-
-// module.exports.couchbaseBucket = function() {
-// 	var cluster = new couchbase.Cluster('couchbase://' + config.couchbase.server);
-// 	return cluster.openBucket(config.couchbase.bucket, config.couchbase.password, function(err) {
-// 		if (err) {
-// 			console.error('Got error: %j', err);
-// 		} else {
-//      		logger.info('Success connect couchbase server');
-// 		}
-// 	});
-// };

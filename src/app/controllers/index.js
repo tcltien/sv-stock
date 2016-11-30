@@ -1,7 +1,15 @@
-<<<<<<< HEAD
-=======
+/*
+ * index.js - Controller for index page.
+ *
+ * Copyright (c) 2016 DIRECTV, Inc.
+ * An Unpublished Work.  All Rights Reserved.
+ *
+ * DIRECTV PROPRIETARY:  The information contained in or disclosed by this
+ * document is considered proprietary by DIRECTV, Inc.  This document and/or the
+ * information contained therein shall not be duplicated nor disclosed in whole
+ * or in part without the specific written permission of DIRECTV, Inc.
+ */
 
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
 'use strict';
 
 /**
@@ -10,17 +18,11 @@
 
 var config = require('../../config/config');
 var logger =  require('winston').loggers.get('application');
-var fs = require("fs");
-var ffmpeg = require('fluent-ffmpeg');
-var command = ffmpeg();
-var SoxCommand = require('sox-audio');
-var TimeFormat = SoxCommand.TimeFormat;
-// var bucket = require('../../config/express').couchbaseBucket();
-// var N1qlQuery = require('couchbase').N1qlQuery;
-// var standingService = require('../services/StandingService');
-// var boxscoreService = require('../services/BoxscoreService');
-var mp3_path = "../src/public/sound/";
-
+var N1qlQuery = require('couchbase').N1qlQuery;
+var fs = require('fs');
+var path = require('path');
+var basepath = path.dirname(process.mainModule.filename);
+var sportdata = require('../../manifest/sports.json');
 
 /**
  * Index page
@@ -30,128 +32,91 @@ var mp3_path = "../src/public/sound/";
  */
 exports.index = function(req, res) {
     logger.info('Index page start..........');
-<<<<<<< HEAD
-
-   // standingService.save();
-    //standingService.find();
-   // standingService.update();
-      // standingService.findQuery();
-
-
-    
-	// var query = N1qlQuery.fromString('SELECT * FROM ' + config.couchbase.bucket + ' WHERE  homeTeamName.teamName.name=$1');		    	
-	// bucket.query(query, ['Blue Jays1'], function(err, rows, meta) {	
-	//  	for (var row in rows) {
- //        	var obj = rows[row];        	      
- //    		if (typeof obj.sportsdata.visitingTeamName != 'undefined'){
- //    			var a = obj.sportsdata.visitingTeamName;		
-	// 			if (typeof a != 'undefined'){
-	// 				console.log(obj.sportsdata.visitingTeamName.teamName.name);
-	// 			}
- //        	}	
-			
-			
- //    	}	    
-	// });
-
-
-	// var query = N1qlQuery.fromString('SELECT data, META(data).id AS _ID, META(data).cas AS _CAS FROM sportsdata data WHERE data.docType == "boxscore" and data.source = "STATS" LIMIT 5');
- //    bucket.query(query, [], function(err, rows, meta) {	
-	// 	logger.debug ('Getting using query');
-	// 	console.log(rows);    
-	// });
-
-
-	// boxscoreService.find({},
-	// {limit: 10,skip: 10},
-	// function(err, items){
-	// 	if (err) throw err;
-	// 	logger.debug ('Getting using model');
-	// 	console.log(JSON.stringify(items));
-	// });
-	// logger.debug('Render index.html');
-	
-
-	// // test find service boxscore
-	// boxscoreService.find();
-
-	// Synchronous read
-	
-	/* Read and save new file */
-	// var c = ffmpeg({ source: mp3_path + '0514.mp3'})  					
- //  			.mergeAdd(mp3_path + '0943.mp3')
- //  			.on('error', function(err) {
-	// 	        console.log('An error occurred: ' + err.message);
-	// 	    })
-	// 	    .on('end', function() {
-	// 	        console.log('Merging finished !');
-	// 	    })
- //  			.mergeToFile(mp3_path + 'test.mp3', mp3_path);
-
-  
-	// var command = ffmpeg(mp3_path + '0943.mp3'); //.save(mp3_path + '0943-1.mp3');
-	// console.log(command);
-	// var command2 = ffmpeg(mp3_path + '0514.mp3'); //.save(mp3_path + '0943-1.mp3');
-	// console.log(command);
-
-	/* Read metadata of file */
-	// ffmpeg.ffprobe(mp3_path + '0514.mp3', function(err, metadata) {
-	//     console.dir(metadata);
-	// });
-
 	logger.debug('Render index.html');
-=======
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
-    res.render('index.html', {});
 
+	res.render('index.html', {
+		sports : Buffer.from(JSON.stringify(sportdata)).toString('base64')
+	});
 };
 
+exports.listIds = function(req, res) {
+	var params = [
+		req.body.sport.toLowerCase(),
+		req.body.structure, 
+		
+		"listIds", // function to call
+		[]
+	];
+	callService(res, params) ;
+}
 
-exports.create = function(req, res) {
-<<<<<<< HEAD
+exports.getData = function(req, res) {
+	var params = [
+		req.body.sport.toLowerCase(),
+		req.body.structure, 
+		
+		"findById", // function to call
+		[req.body.docId],
+		function(doc, service){
+			var result = {};
+			result.manifest = service.getManifest(req.body.sport.toLowerCase(), req.body.structure);
+			result.doc = doc;
+			res.json(result);
+		}
+	];
+	callService(res, params) ;
+}
 
-		// var userData = {	  				
-		// 	"id": new Date().getTime(),
-		// 	"data": {
-		// 	    "data": {}
-		//  	},
-		// 	  "homeTeamName": {
-		// 	    "teamName": {
-		// 	      "alias": "TOR",
-		// 	      "name": "Blue Jays2"
-		// 	    }
-		// 	  },
-		// 	  "visitingTeamName": {
-		// 	    "teamName": {
-		// 	      "alias": "HOU",
-		// 	      "name": "Houston Astros"
-		// 	    }
-		// 	  }
-			
-  // 		};
-  // 		bucket.upsert('user' + new Date().getTime(), userData, function (err, response){
-	 //    if (err) {
-		//       console.log('Failed to save to Couchbase', err);
-		//     } else {
-		//     	console.log('Save Success');
-		//     	var query = N1qlQuery.fromString('SELECT * FROM ' + config.couchbase.bucket + ' WHERE  homeTeamName.teamName.name=$1');		    	
-		// 	bucket.query(query, ['Blue Jays2'], function(err, rows, meta) {	
-		//     		console.log(rows);
-		// 		 	for (var row in rows) {
+exports.saveData = function (req, res) {
+	var data = JSON.parse(Buffer.from(req.body.data, 'base64'));
+	var params = [
+		req.body.sport.toLowerCase(),
+		req.body.structure, 
+		
+		"save", // function to call
+		[ req.body.docId , data], // params of function
+		function(err, response){ 
+			var result = {};
+			if (err) {
+				result.success = false;
+			}else {
+				result.success = true;
+			}
+			result.response = response;
+			res.json(result);
+		}
+	];
+	callService(res, params) ;
+}
 
-		// 	        	var obj = rows[row];
-		// 	        	console.log(obj);
-		// 				var a = obj.sportsdata.visitingTeamName;					
-		// 				if (typeof a != 'undefined'){
-		// 					console.log(obj.sportsdata.visitingTeamName.teamName.name);
-		// 				}
-						
-		// 	    	}	    
-		// 		});
-		// 	}
-	 //  	});
+var callService = function(res, params) {
+	var sport = params[0];
+	var structure = params[1];
+	sport = sport.charAt(0).toUpperCase() + sport.slice(1);
+	structure = structure.charAt(0).toUpperCase() + structure.slice(1);
+	var service = "app/services/" + params[0] + "/" + sport + structure + "Service.js";	
+	params = params.slice(2);
+	executeService(service, res, params);	
+
 	
-=======
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
-	res.render('index.html', {});
+}
+
+var executeService = function(service, res, params) {
+	fs.exists(service, function(exist){
+		if (exist) {
+			var service = new (require(basepath + '/' + this.service));
+			var func = params[0];
+			var callback = params[2];
+			if(callback == undefined) {
+				callback = function(result) {
+					res.json(result);
+				}
+			}
+			params[1].push(callback);
+			params = params.slice(1,2);
+			service[func].apply(service,params[0]); 
+		}else {
+			res.json([]);
+		}
+	}.bind({service : service}));
 }

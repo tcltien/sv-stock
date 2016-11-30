@@ -1,8 +1,15 @@
-<<<<<<< HEAD
-=======
+/*
+ * users.js - Authentication controller.
+ *
+ * Copyright (c) 2016 DIRECTV, Inc.
+ * An Unpublished Work.  All Rights Reserved.
+ *
+ * DIRECTV PROPRIETARY:  The information contained in or disclosed by this
+ * document is considered proprietary by DIRECTV, Inc.  This document and/or the
+ * information contained therein shall not be duplicated nor disclosed in whole
+ * or in part without the specific written permission of DIRECTV, Inc.
+ */
 
-
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
 'use strict';
 
 var config = require('../../config/config');
@@ -18,7 +25,6 @@ var uuid = require('uuid');
  */
 exports.requiresLogin = function(req, res, next) {
     //logger.debug(req.session.session_id);
-	console.log(req.session);
     if ((!req.session || !req.session.session_id) && config.checkSession) {
         // login
         res.redirect(config.app.webroot + '/login');

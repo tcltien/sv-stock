@@ -1,11 +1,12 @@
 {% extends 'layout.html' %} {% block content %}
+<script type="text/javascript" src="{{webroot}}/js/main.js"></script>
 <section id="main">
-    <div class="titTop">
-        
-Test page
-    </div>
-    <!-- end titTop -->
-
+	
 </section>
+<script type="text/javascript">
+var sportdata = JSON.parse(Base64.decode("{{sports}}"));
+
+</script>
+
 
 {% endblock %}
