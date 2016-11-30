@@ -1,0 +1,432 @@
+{
+	"header": "NFL PlayerStats",
+	"elements": {
+		"conference": {
+			"caption": "Conference",
+			"type": "text",
+			"field": "name"
+		},
+		"seasonal": {
+			"caption": "Seasonal",
+			"type": "boolean"
+		},
+		"has-stats": {
+			"caption": "Has Stats",
+			"type": "group",
+			"elements": {
+				"offense": {
+					"caption": "Offense",
+					"type": "boolean"
+				},
+				"defense": {
+					"caption": "Defense",
+					"type": "boolean"
+				}
+			}
+		},
+		"player-position": {
+			"caption": "Player Position",
+			"type": "text",
+			"field": "position"
+		},
+		"player-number": {
+			"caption": "Player Number",
+			"type": "number",
+			"field": "number"
+		},
+		"player-status": {
+			"caption": "Player Status",
+			"type": "boolean"
+		},
+		"suspended": {
+			"caption": "Suspended",
+			"type": "boolean"
+		},
+		"practice-squad": {
+			"caption": "Practice Squad",
+			"type": "boolean"
+		},
+		"injured": {
+			"caption": "Injured",
+			"type": "group",
+			"elements": {
+				"injured": {
+					"caption": "Injured",
+					"type": "boolean"
+				},
+				"text": {
+					"caption": "Text",
+					"type": "text"
+				}
+			}
+		},
+		"non-football-injury": {
+			"caption": "Non Football Injury",
+			"type": "boolean",
+			"field": "reserve"
+		},
+		"name": {
+			"caption": "Name",
+			"type": "group",
+			"elements": {
+				"display-name": {
+					"caption": "Display Name",
+					"type": "text"
+				},
+				"first-name": {
+					"caption": "First Name",
+					"type": "text"
+				},
+				"last-name": {
+					"caption": "Last Name",
+					"type": "text"
+				}
+			}
+		},
+		"physically-unable": {
+			"caption": "Physically Unable",
+			"type": "boolean",
+			"field": "unable"
+		},
+		"exempt": {
+			"caption": "exempt",
+			"type": "boolean",
+			"field": "exempt"
+		},
+		"nfl-player-stats-team": {
+			"caption": "Nfl Player Stats Team",
+			"type": "group",
+			"elements": {
+				"conference": {
+					"caption": "Conference",
+					"type": "text",
+					"field": "name"
+				},
+				"nfl-player-stats-kicking": {
+					"caption": "Nfl Player Stats Kicking",
+					"type": "group",
+					"elements": {
+						"extra-points": {
+							"caption": "Extra Points",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"percentage": {
+									"caption": "Percentage",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals-50-plus": {
+							"caption": "Field Goals 50 plus",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"leader-kicking-qualification": {
+							"caption": "Leader Kicking Qualification",
+							"type": "boolean",
+							"field": "qualification"
+						},
+						"field-goals-30-39": {
+							"caption": "Field Goals 30 39",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"long-field-goal": {
+							"caption": "Long Field Goal",
+							"type": "number",
+							"field": "yards"
+						},
+						"field-goals-40-49": {
+							"caption": "Field Goals 40 49",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"kicking-points": {
+							"caption": "Kicking Points",
+							"type": "number",
+							"field": "points"
+						},
+						"field-goals-0-19": {
+							"caption": "Field Goals 0 19",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"kickoff-yards": {
+							"caption": "Kickoff Yards",
+							"type": "group",
+							"elements": {
+								"average": {
+									"caption": "Average",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "yards",
+									"type": "number"
+								}
+							}
+						},
+						"onside-kickoffs": {
+							"caption": "Onside Kickoffs",
+							"type": "group",
+							"elements": {
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								},
+								"successful": {
+									"caption": "Successful",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals-20-29": {
+							"caption": "Field Goals 20 29",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals": {
+							"caption": "Field Goals",
+							"type": "group",
+							"elements": {
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"percentage": {
+									"caption": "Percentage",
+									"type": "number"
+								},
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								}
+							}
+						},
+						"kickoffs": {
+							"caption": "Kickoffs",
+							"type": "group",
+							"elements": {
+								"avg-start": {
+									"caption": "Avg Start",
+									"type": "number"
+								},
+								"number": {
+									"caption": "Number",
+									"type": "number"
+								},
+								"returns": {
+									"caption": "Returns",
+									"type": "number"
+								},
+								"return-yards": {
+									"caption": "Return Yards",
+									"type": "number"
+								},
+								"touchbacks": {
+									"caption": "Touchbacks",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals-averages": {
+							"caption": "Field Goals Averages",
+							"type": "group",
+							"elements": {
+								"attempted": {
+									"caption": "Attempted",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"miss": {
+									"caption": "Miss",
+									"type": "number"
+								}
+							}
+						}
+					}
+				},
+				"nfl-player-stats-overall": {
+					"caption": "Nfl Player Stats Overall",
+					"type": "group",
+					"elements": {
+						"participation-team": {
+							"caption": "Participation Team",
+							"type": "group",
+							"elements": {
+								"offense": {
+									"caption": "Offense",
+									"type": "number"
+								},
+								"special-teams": {
+									"caption": "Special Teams",
+									"type": "number"
+								},
+								"defense": {
+									"caption": "Defense",
+									"type": "number"
+								}
+							}
+						},
+						"touchdowns": {
+							"caption": "Touchdowns",
+							"type": "group",
+							"elements": {
+								"touchdowns": {
+									"caption": "Touchdowns",
+									"type": "number"
+								},
+								"missed-FG-return": {
+									"caption": "Missed FG Return",
+									"type": "number"
+								}
+							}
+						},
+						"participation-player": {
+							"caption": "Participation Player",
+							"type": "group",
+							"elements": {
+								"offense": {
+									"caption": "Offense",
+									"type": "number"
+								},
+								"special-teams": {
+									"caption": "Special Teams",
+									"type": "number"
+								},
+								"defense": {
+									"caption": "Defense",
+									"type": "number"
+								}
+							}
+						},
+						"fumbles": {
+							"caption": "Fumbles",
+							"type": "group",
+							"elements": {
+								"touchdowns": {
+									"caption": "Touchdowns",
+									"type": "number"
+								},
+								"own-yards": {
+									"caption": "Own Yards",
+									"type": "number"
+								},
+								"fumbles": {
+									"caption": "Fumbles",
+									"type": "number"
+								},
+								"lost": {
+									"caption": "Lost",
+									"type": "number"
+								},
+								"own-recovered": {
+									"caption": "Own Recovered",
+									"type": "number"
+								}
+							}
+						},
+						"games": {
+							"caption": "Fumbles",
+							"type": "text",
+							"field": "games"
+						},
+						"games-started": {
+							"caption": "Games Started",
+							"type": "text",
+							"field": "games-started"
+						},
+						"two-point-points": {
+							"caption": "Two Point Points",
+							"type": "group",
+							"elements": {
+								"passes": {
+									"caption": "Passes",
+									"type": "number"
+								},
+								"points": {
+									"caption": "Points",
+									"type": "number"
+								}
+							}
+						},
+						"points": {
+							"caption": "Points",
+							"type": "text",
+							"field": "points"
+						},
+						"total-yards": {
+							"caption": "Total Yards",
+							"type": "group",
+							"elements": {
+								"offensive": {
+									"caption": "Offensive",
+									"type": "number"
+								},
+								"returning": {
+									"caption": "Returning",
+									"type": "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

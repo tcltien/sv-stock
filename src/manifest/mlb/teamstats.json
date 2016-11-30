@@ -1,0 +1,574 @@
+{
+	"header": "MLB TeamStats",
+	"elements": {
+		"games-started": {
+			"caption": "GameStarted",
+			"type": "number",
+			"field": "games"
+		},
+		"seasonal": {
+			"caption": "Seasonal",
+			"type": "boolean"
+		},
+		"team-city": {
+			"caption": "Team City",
+			"type": "text",
+			"field" : "city"
+		},
+		"year": {
+			"caption": "Year",
+			"type": "number",
+			"field" : "year"
+		},
+		"league-name": {
+			"caption": "League",
+			"type": "text",
+			"field" : "name"
+		},
+		"team-name": {
+			"caption": "Team",
+			"type": "group",
+			"elements": {
+				"name": {
+					"caption": "Name",
+					"type": "text"				
+				},
+				"alias": {
+					"caption": "Alias",
+					"type": "text"				
+				}
+			}		
+		},
+		"baseball-mlb-stats-defense": {
+			"caption": "MLB Stats Defense",
+			"type": "list",
+			"identifier": ["split"],
+			"elements": {
+				"range-factor": {
+					"caption": "Range Factor",
+					"type": "number",
+					"field": "factor"
+				},
+				"putouts": {
+					"caption": "Putouts",
+					"type": "number",
+					"field": "putouts"
+				},
+				"fielding-percentage": {
+					"caption": "Fielding Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"innings-fielded": {
+					"caption": "Innings Fielded",
+					"type": "number",
+					"field": "innings"
+				},
+				"passed-balls": {
+					"caption": "Passed Balls",
+					"type": "number",
+					"field": "passed-balls"
+				},
+				"games-started": {
+					"caption": "Games Started",
+					"type": "number",
+					"field": "games"
+				},
+				"opportunities": {
+					"caption": "Opportunities",
+					"type": "number",
+					"field": "number"
+				},
+				"double-plays": {
+					"caption": "Double Plays",
+					"type": "number",
+					"field": "double-plays"
+				},
+				"triple-plays": {
+					"caption": "Triple Plays",
+					"type": "number",
+					"field": "triple-plays"
+				},
+				"split": {
+					"caption": "Total",
+					"type": "text"
+				},
+				"assists": {
+					"caption": "Assists",
+					"type": "number",
+					"field": "assists"
+				},
+				"fielding-outs": {
+					"caption": "Fielding Outs",
+					"type": "number",
+					"field": "outs"
+				},
+				"balls-hit-in-zone": {
+					"caption": "Balls Hit in Zone",
+					"type": "number",
+					"field": "balls"
+				},
+				"games-played": {
+					"caption": "Games Played",
+					"type": "number",
+					"field": "games"
+				},
+				"hits-allowed": {
+					"caption": "Hits Allowed",
+					"type": "number",
+					"field": "hits"
+				},
+				"errors": {
+					"caption": "Errors",
+					"type": "number",
+					"field": "errors"
+				},
+				"zone-rating": {
+					"caption": "Zone Rating",
+					"type": "number",
+					"field": "rating"
+				}
+			}
+		},
+		"baseball-mlb-stats-hitting": {
+			"caption": "MLB Stats Hitting",
+			"type": "group",
+			"elements": {
+				"triples": {
+					"caption": "Triples",
+					"type": "number",
+					"field": "triples"
+				},
+				"intentional-walks": {
+					"caption": "International Walk",
+					"type": "number",
+					"field": "walks"
+				},
+				"sacrifice-hits": {
+					"caption": "Sacrifice Hits",
+					"type": "number",
+					"field": "hits"
+				},
+				"fly-balls-hit": {
+					"caption": "Fly Balls Hit",
+					"type": "number",
+					"field": "balls-hit"
+				},
+				"home-runs": {
+					"caption": "Home Runs",
+					"type": "number",
+					"field": "home-runs"
+				},
+				"runs-batted-in": {
+					"caption": "Runs Batted In",
+					"type": "number",
+					"field": "runs-batted-in"
+				},
+				"at-bats": {
+					"caption": "At Bats",
+					"type": "number",
+					"field": "at-bats"
+				},
+				"pitched-to": {
+					"caption": "Pitched To",
+					"type": "number",
+					"field": "pitches"
+				},
+				"plate-appearances": {
+					"caption": "Plate Appearance",
+					"type": "number",
+					"field": "appearances"
+				},
+				"split": {
+					"caption": "Total",
+					"type": "text"
+				},
+				"stolen-bases": {
+					"caption": "Stolen Bases",
+					"type": "number",
+					"field": "stolen-bases"
+				},
+				"games-played": {
+					"caption": "Games Played",
+					"type": "number",
+					"field": "games"
+				},
+				"runs-scored": {
+					"caption": "Runs Scored",
+					"type": "number",
+					"field": "runs-scored"
+				},
+				"stolen-base-percentage": {
+					"caption": "StolenBase Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"slugging-percentage": {
+					"caption": "Slugging Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"pitched-to-per-plate-appearance": {
+					"caption": "Pitched To Per Plate Appearance",
+					"type": "number",
+					"field": "number"
+				},
+				"batting-average": {
+					"caption": "Batting Average",
+					"type": "number",
+					"field": "average"
+				},
+				"hits": {
+					"caption": "Hits",
+					"type": "number",
+					"field": "hits"
+				},
+				"walks": {
+					"caption": "Walks",
+					"type": "number",
+					"field": "walks"
+				},
+				"ground-ball-fly-ball-hit-ratio": {
+					"caption": "Ground Ball Fly Ball Hit Ratio",
+					"type": "number",
+					"field": "ratio"
+				},
+				"total-bases": {
+					"caption": "Total Bases",
+					"type": "number",
+					"field": "total-bases"
+				},
+				"sacrifice-flies": {
+					"caption": "Sacrifice Files",
+					"type": "number",
+					"field": "flies"
+				},
+				"doubles": {
+					"caption": "Doubles",
+					"type": "number",
+					"field": "doubles"
+				},
+				"ground-balls-hit": {
+					"caption": "Ground Ball Hit",
+					"type": "number",
+					"field": "balls-hit"
+				},
+				"hit-by-pitch": {
+					"caption": "Hit By Pitch",
+					"type": "number",
+					"field": "hit-by-pitch"
+				},
+				"on-base-percentage": {
+					"caption": "On Base Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"caught-stealing": {
+					"caption": "Caught Stealing",
+					"type": "number",
+					"field": "caught-stealing"
+				},
+				"grounded-into-double-plays": {
+					"caption": "Grounded Into Double Plays",
+					"type": "number",
+					"field": "double-plays"
+				},
+				"strike-outs": {
+					"caption": "Strike Outs",
+					"type": "number",
+					"field": "strike-outs"
+				}
+			}
+		},
+		"baseball-mlb-stats-catcher": {
+			"caption": "MLBStatsCatcher",
+			"type": "group",
+			"elements": {
+				"pitcher-pickoffs": {
+					"caption": "PitcherPickoffs",
+					"type": "number",
+					"field": "pickoffs"
+				},
+				"split": {
+					"caption": "Total",
+					"type": "text"
+				},
+				"caught-stealing": {
+					"caption": "Caught Stealing",
+					"type": "number",
+					"field": "caught-stealing"
+				},
+				"earned-run-average": {
+					"caption": "Earned Run Average",
+					"type": "number",
+					"field": "average"
+				},
+				"pitcher-caught-stealing": {
+					"caption": "Pitcher Caught Stealing",
+					"type": "number",
+					"field": "caught-stealing"
+				},
+				"catcher-pickoffs": {
+					"caption": "Catcher Pickoffs",
+					"type": "number",
+					"field": "pickoffs"
+				},
+				"stolen-base-percentage": {
+					"caption": "Stolen Base Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"stolen-base-attempts": {
+					"caption": "StolenBaseAttempts",
+					"type": "number",
+					"field": "attempts"
+				}
+			}
+		},
+		"baseball-mlb-stats-pitching": {
+			"caption": "MLB Stats Pitching",
+			"type": "group",
+			"elements": {
+				"earned-runs-allowed": {
+					"caption": "Earned Runs Allowed",
+					"type": "number",
+					"field": "runs"
+				},
+				"ground-ball-fly-ball-allowed-ratio": {
+					"caption": "Ground Ball Fly Ball Allowed Ratio",
+					"type": "number",
+					"field": "ratio"
+				},
+				"ground-into-double-play": {
+					"caption": "Ground Into Double Play",
+					"type": "number",
+					"field": "number"
+				},
+				"winning-percentage": {
+					"caption": "Winning Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"home-runs": {
+					"caption": "Home Runs",
+					"type": "number",
+					"field": "home-runs"
+				},
+				"fly-balls-allowed": {
+					"caption": "Fly Balls Allowed",
+					"type": "number",
+					"field": "balls"
+				},
+				"losses": {
+					"caption": "Losses",
+					"type": "number",
+					"field": "number"
+				},
+				"split": {
+					"caption": "Total",
+					"type": "text"
+				},
+				"runs-allowed": {
+					"caption": "Runs Allowed",
+					"type": "number",
+					"field": "runs"
+				},
+				"saves": {
+					"caption": "Saves",
+					"type": "number",
+					"field": "saves"
+				},
+				"inherited-stranded": {
+					"caption": "Inherited Stranded",
+					"type": "number",
+					"field": "stranded"
+				},
+				"opponent-batting-average": {
+					"caption": "Opponent Batting Average",
+					"type": "number",
+					"field": "average"
+				},
+				"blown-saves": {
+					"caption": "Blown Saves",
+					"type": "number",
+					"field": "number"
+				},
+				"wins": {
+					"caption": "Wins",
+					"type": "number",
+					"field": "number"
+				},
+				"doubles-allowed": {
+					"caption": "Doubles Allowed",
+					"type": "number",
+					"field": "doubles"
+				},
+				"stolen-bases-allowed": {
+					"caption": "Stolen Bases Allowed",
+					"type": "number",
+					"field": "bases"
+				},
+				"balks": {
+					"caption": "Balks",
+					"type": "number",
+					"field": "balks"
+				},
+				"triples-allowed": {
+					"caption": "Triples Allowed",
+					"type": "number",
+					"field": "triples"
+				},
+				"sacrifice-flies": {
+					"caption": "Sacrifice Files",
+					"type": "number",
+					"field": "flies"
+				},
+				"quality-starts": {
+					"caption": "Quality Starts",
+					"type": "number",
+					"field": "starts"
+				},
+				"caught-stealing": {
+					"caption": "Caught Stealing",
+					"type": "number",
+					"field": "caught-stealing"
+				},
+				"slugging-pct": {
+					"caption": "Slugging Pct",
+					"type": "number",
+					"field": "percentage"
+				},
+				"total-bases-allowed": {
+					"caption": "Total Bases Allowed",
+					"type": "number",
+					"field": "total-bases"
+				},
+				"hit-batsmen": {
+					"caption": "Hit Batsmen",
+					"type": "number",
+					"field": "batsmen"
+				},
+				"run-support-per-nine": {
+					"caption": "Run Support Per Nine",
+					"type": "number",
+					"field": "run-support"
+				},
+				"sacrifice-hits": {
+					"caption": "Sacrifice Hits",
+					"type": "number",
+					"field": "hits"
+				},
+				"pitches-per-inning": {
+					"caption": "Pitches Per Inning",
+					"type": "number",
+					"field": "pitches"
+				},
+				"strike-outs-thrown": {
+					"caption": "Strike Outs Thrown",
+					"type": "number",
+					"field": "strike-outs"
+				},
+				"ground-balls-allowed": {
+					"caption": "Ground Balls Allwed",
+					"type": "number",
+					"field": "balls"
+				},
+				"wild-pitches": {
+					"caption": "Wild Pitches",
+					"type": "number",
+					"field": "pitches"
+				},
+				"shut-outs": {
+					"caption": "Shut Outs",
+					"type": "number",
+					"field": "shut-outs"
+				},
+				"earned-run-average": {
+					"caption": "Earned Run Average",
+					"type": "number",
+					"field": "average"
+				},
+				"finishes": {
+					"caption": "Finishes",
+					"type": "number",
+					"field": "finishes"
+				},
+				"run-support": {
+					"caption": "Run Support",
+					"type": "number",
+					"field": "runs"
+				},
+				"hits-allowed": {
+					"caption": "Hits Allowed",
+					"type": "number",
+					"field": "hits"
+				},
+				"innings-pitched": {
+					"caption": "Innings Pitched",
+					"type": "number",
+					"field": "innings"
+				},
+				"inherited-runners": {
+					"caption": "Inherited Runners",
+					"type": "number",
+					"field": "runners"
+				},
+				"on-base-average": {
+					"caption": "On Base Average",
+					"type": "number",
+					"field": "average"
+				},
+				"save-opportunities": {
+					"caption": "Save Opportunities",
+					"type": "number",
+					"field": "opportunities"
+				},
+				"games-started": {
+					"caption": "Game Started",
+					"type": "number",
+					"field": "games"
+				},
+				"complete-games": {
+					"caption": "Complete Games",
+					"type": "number",
+					"field": "games"
+				},
+				"intentional-walks-allowed": {
+					"caption": "International Walks Allowed",
+					"type": "number",
+					"field": "walks"
+				},
+				"total-batters": {
+					"caption": "Total Batters",
+					"type": "number",
+					"field": "total"
+				},
+				"games-pitched": {
+					"caption": "Games Pitched",
+					"type": "number",
+					"field": "games"
+				},
+				"holds": {
+					"caption": "Hold",
+					"type": "number",
+					"field": "holds"
+				},
+				"total-walks-allowed": {
+					"caption": "Total Walks Allowed",
+					"type": "number",
+					"field": "walks"
+				},
+				"pickoffs": {
+					"caption": "Pickoffs",
+					"type": "number",
+					"field": "pickoffs"
+				},
+				"pitch-count": {
+					"caption": "Pitch Count",
+					"type": "number",
+					"field": "count"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,126 @@
+{
+	"header": "NBA Standing",
+	"elements": {
+		"nba-conference-standings": {
+			"caption": "NBA Conference",		
+			"identifier": ["conference"],
+			"type": "list",
+			"elements": {
+				"nba-division-standings": {
+					"caption": "NBA Division",
+					"identifier": ["division"],
+					"type": "list",
+					"elements": {
+						"nba-team-standings": {
+							"caption": "NBA Team ",
+							"type": "list",
+							"identifier": ["team-name",
+							"name"],
+							"elements": {								
+								"wins": {
+									"caption": "Wins",
+									"type": "text",
+									"field": "number"
+								},
+								"points-for-per-game": {
+									"caption": "Points For Per Game",
+									"type": "number",
+									"field": "points"
+								},
+								"games-back": {
+									"caption": "Game back",
+									"type": "text",
+									"field": "number"
+								},
+								"magic-number": {
+									"caption": "Magic Number",
+									"type": "text",
+									"field": "number"
+								},
+								"winning-percentage": {
+									"caption": "Winning Percentage",
+									"type": "text",
+									"field": "percentage"
+								},
+								"streak": {
+									"caption": "Streak",
+									"type": "group",
+									"elements": {
+										"games": {
+											"caption": "Games",
+											"type": "text"
+										},
+										"kind": {
+											"caption": "Kind",
+											"type": "text"
+										}
+									}
+								},
+								"losses": {
+									"caption": "Game Losses",
+									"type": "text",
+									"field": "number"
+								},
+								"today-games-included": {
+									"caption": "Today Game Include",
+									"type": "boolean",
+									"field": "through"
+								},
+								"conference-games-back": {
+									"caption": "Conference Games Back",
+									"type": "number",
+									"field": "games"
+								},
+								"points-against-per-game": {
+									"caption": "Points Against Per Game",
+									"type": "number",
+									"field": "points"
+								},
+								"eliminated-from-playoffs": {
+									"caption": "Eliminated From Playoff",
+									"type": "boolean",
+									"field": "eliminated"
+								},
+								"conference-seed": {
+									"caption": "Conference Seed",
+									"type": "number",
+									"field": "seed"
+								},
+								"elimination-number": {
+									"caption": "Elimination Number",
+									"type": "text",
+									"field": "number"
+								},
+								"place": {
+									"caption": "Place",
+									"type": "number",
+									"field": "place"
+								},		
+								"win-loss-record": {
+									"caption": "Win Loss Record",
+									"type": "table",
+									"identifier": ["type"],
+									"elements": {
+										"wins": {
+											"caption": "Wins",
+											"type": "number"
+										},
+										"losses": {
+											"caption": "Losses",
+											"type": "number"
+										},
+										"type": {
+											"caption": "Type",
+											"type": "text"
+										}
+									}
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

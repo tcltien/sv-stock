@@ -1,0 +1,140 @@
+{
+	"header": "NFL Event",
+	"elements": {
+		"name": {
+			"caption": "Name",
+			"type": "text"
+		},
+		"date": {
+			"caption": "Date",
+			"type": "number"
+		},
+		"week": {
+			"caption": "Week",
+			"type": "number"
+		},
+		"tv": {
+			"caption": "TV",
+			"type": "group",
+			"elements": {
+				"station": {
+					"caption": "Station",
+					"type": "group",
+					"elements": {
+						"country": {
+							"caption": "Country",
+							"type": "text"
+						},
+						"call-letters": {
+							"caption": "Call Letters",
+							"type": "text"
+						},
+						"team-alias": {
+							"caption": "Team Alias",
+							"type": "text"
+						},
+						"name": {
+							"caption": "Name",
+							"type": "text"
+						},
+						"type": {
+							"caption": "Type",
+							"type": "text"
+						}
+					}
+				}
+			}
+		},
+		"seasonal": {
+			"caption": "Seasonal",
+			"type": "boolean"
+		},
+		"home-team": {
+			"caption": "Home Team",
+			"type": "group",
+			"elements": {
+				"team-name": {
+					"caption": "Team Name",
+					"type": "group",
+					"elements": {
+						"name": {
+							"caption": "Name",
+							"type": "text"
+						},
+						"alias": {
+							"caption": "Alias",
+							"type": "text"
+						}
+					}
+				},
+				"team-city": {
+					"caption": "Team City",
+					"type": "group",
+					"elements": {
+						"city": {
+							"caption": "City",
+							"type": "text"
+						}
+					}
+				}
+			}
+		},
+		"visiting-team": {
+			"caption": "Visiting Team",
+			"type": "group",
+			"elements": {
+				"team-name": {
+					"caption": "Team Name",
+					"type": "group",
+					"elements": {
+						"name": {
+							"caption": "Name",
+							"type": "text"
+						},
+						"alias": {
+							"caption": "Alias",
+							"type": "text"
+						}
+					}
+				},
+				"team-city": {
+					"caption": "Team City",
+					"type": "group",
+					"elements": {
+						"city": {
+							"caption": "City",
+							"type": "text"
+						}
+					}
+				}
+			}
+		},
+		"tba": {
+			"caption": "TBA",
+			"type": "boolean"
+		},
+		"sportSeason": {
+			"caption": "Sport Season",
+			"type": "text"
+		},
+		"gametype": {
+			"caption": "Game Type",
+			"type": "group",
+			"elements": {
+				"type": {
+					"caption": "Type",
+					"type": "text"
+				},
+				"detail": {
+					"caption": "Detail",
+					"type": "text"
+				}
+			}
+		},
+		"status": {
+			"caption": "Status",
+			"type": "text",
+			"field": "status"
+		}
+	}
+}

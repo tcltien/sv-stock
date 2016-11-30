@@ -1,0 +1,57 @@
+[{
+	"name": "MLB",
+	"structure": [{
+		"name": "Boxscore"
+	},
+	{
+		"name": "Standing"
+	},
+	{
+		"name": "Teamstats"
+	},
+	{
+		"name": "Playerstat"
+	},
+	{
+		"name": "Event"
+	}]
+}, 
+{
+	"name": "NBA",
+	"structure": [{
+		"name": "Boxscore"
+	},
+	{
+		"name": "Standing"
+	},
+	{
+		"name": "Playerstat"
+	}]
+},
+{
+	"name": "NFL",
+	"structure": [{
+		"name": "Boxscore"
+	},
+	{
+		"name": "Standing"
+	},
+	{
+		"name": "Playerstat"
+	},
+	{
+		"name": "Event"
+	},
+	{
+		"name": "Teamstats"
+	}]
+},
+{
+	"name": "Tennis",
+	"structure": [{
+		"name": "Player"
+	},
+	{
+		"name": "Statistic"
+	}]
+}]

@@ -1,0 +1,138 @@
+{
+	"header": "NFL Standing",
+	"elements": {
+		"football-nfl-conference-standings": {
+			"caption": "NFL conference",
+			"identifier": ["name"],
+			"type": "list",
+			"elements": {
+				"football-nfl-division-standings": {
+					"caption": "NFL Division",
+					"identifier": ["name"],
+					"type": "list",
+					"elements": {
+						"football-nfl-team-standings": {
+							"caption": "NFL Team ",
+							"type": "list",
+							"identifier": ["team-name","name"],
+							"elements": {
+								"wins": {
+									"caption": "Wins",
+									"type": "number",
+									"field": "number"
+								},
+								"clinched-division": {
+									"caption": "Clinched Division",
+									"type": "boolean",
+									"field": "clinched"
+								},
+								"clinched-playoffs": {
+									"caption": "Clinched Playoffs",
+									"type": "boolean",
+									"field": "clinched"
+								},
+								"clinched-home-field": {
+									"caption": "Clinched Home Field",
+									"type": "boolean",
+									"field": "clinched"
+								},
+								"strength-of-schedule": {
+									"caption": "Strength of schedule",
+									"type": "number",
+									"field": "rank"
+								},
+								"points-for": {
+									"caption": "Points For",
+									"type": "number",
+									"field": "number"
+								},
+								"ties": {
+									"caption": "Ties",
+									"type": "number",
+									"field": "number"
+								},
+								"points-against": {
+									"caption": "Points Against",
+									"type": "number",
+									"field": "number"
+								},
+								"eliminated-from-playoffs": {
+									"caption": "Eliminated From Playoff",
+									"type": "text",
+									"field": "eliminated"
+								},
+								"games-back": {
+									"caption": "Game back",
+									"type": "text",
+									"field": "number"
+								},
+								"losses": {
+									"caption": "Game Losses",
+									"type": "text",
+									"field": "number"
+								},
+								"streak": {
+									"caption": "Streak",
+									"type": "group",
+									"elements": {
+										"games": {
+											"caption": "Games",
+											"type": "text"
+										},
+										"kind": {
+											"caption": "Kind",
+											"type": "text"
+										}
+									}
+								},
+								"today-games-included": {
+									"caption": "Today Game Include",
+									"type": "boolean",
+									"field": "through"
+								},
+								"wc-games-back": {
+									"caption": "Wild Card Game Back",
+									"type": "text",
+									"field": "number"
+								},
+								"win-loss-record": {
+									"caption": "Win Loss Record",
+									"type": "table",
+									"identifier": ["name"],
+									"elements": {
+										"wins": {
+											"caption": "Wins",
+											"type": "number"
+										},
+										"losses": {
+											"caption": "Losses",
+											"type": "number"
+										},
+										"ties": {
+											"caption": "Ties",
+											"type": "number"
+										},
+										"type": {
+											"caption": "Type",
+											"type": "text"
+										}
+									}
+								},
+								"winning-percentage": {
+									"caption": "WinningPercentage",
+									"type": "text",
+									"field": "percentage"
+								},
+								"wins": {
+									"caption": "Wins",
+									"type": "text",
+									"field": "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

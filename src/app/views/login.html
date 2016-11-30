@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body id="login-page">
+	<div class="main-container">
+
+		<div class="login-panel">
+			<form action="login" method="POST" id="login-form">
+			<div class="panel-header">
+				
+			</div>
+			<div class="panel-content">
+				<h1>SV Stock</h1>
+				<div class="login-box">
+					<div class="box-title">
+						<span>Your network credentials are required for login.</span>
+					</div>
+					<div class="box-content">
+						<input type="text" name="username" placeholder="USERNAME" />
+						<input type="password" name="passwd" placeholder="PASSWORD" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel-footer">
+				<button id="login-btn"></button>
+			</div>
+			
+			</form>
+		</div>
+	</div>
+
+	<div class="login-overlay hidden">
+		<div class="message">
+			<h1>Invalid Username or Password </h1>
+			<h1>Please try again..</h1>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		
+		$('#login-btn').click(function(){
+			$('#login-form').submit();
+		});
+		$(document).ready(function(){
+			if (window.location.hash == "#error") {
+				$('.login-overlay').removeClass('hidden');
+			}
+		});
+		$(document).click(function(e){
+			if (!$('#login-btn').is(e.target)) {
+				$('.login-overlay').addClass('hidden');
+			}
+		})
+	</script>
+</body>

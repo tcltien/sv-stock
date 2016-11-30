@@ -1,0 +1,87 @@
+{
+	"header": "MLB Event",
+	"elements": {
+		"home-starting-pitcher": {
+			"caption": "Home Starting Pitcher",
+			"type": "group",
+			"elements": {
+				"player-data": {
+					"caption": "Pitcher Data",
+					"identifier": ["division"],
+					"type": "group",
+					"elements": {
+						"name": {
+							"caption": "Player Name",
+							"type": "group",
+							"elements": {
+								"display-name": {
+									"caption": "Display Name",
+									"type": "text"
+								},
+								"first-name": {
+									"caption": "First Name",
+									"type": "text"
+								},
+								"last-name": {
+									"caption": "Last Name",
+									"type": "text"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"home-team-score": {
+			"caption": "Home Team Score",
+			"type": "number",
+			"field": "score"
+		},
+		"outcome-home": {
+			"caption": "Outcome Home",
+			"type": "text",
+			"field": "outcome"
+		},
+		"away-starting-pitcher": {
+			"caption": "Visit Starting Pitcher",
+			"type": "group",
+			"elements": {
+				"player-data": {
+					"caption": "Pitcher Data",
+					"identifier": ["division"],
+					"type": "group",
+					"elements": {
+						"name": {
+							"caption": "Player Name",
+							"type": "group",
+							"elements": {
+								"display-name": {
+									"caption": "Display Name",
+									"type": "text"
+								},
+								"first-name": {
+									"caption": "First Name",
+									"type": "text"
+								},
+								"last-name": {
+									"caption": "Last Name",
+									"type": "text"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"visiting-team-score": {
+			"caption": "Visit Team Score",
+			"type": "number",
+			"field": "score"
+		},
+		"outcome-visit": {
+			"caption": "Outcome Visit",
+			"type": "text",
+			"field": "outcome"
+		}
+	}
+}

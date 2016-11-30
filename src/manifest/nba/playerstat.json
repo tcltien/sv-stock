@@ -1,0 +1,388 @@
+{
+	"header": "NBA PlayerStats",
+	"elements": {
+		"name": {
+			"caption": "Player Name",
+			"type": "group",
+			"elements": {
+				"display-name": {
+					"caption": "Display Name",
+					"type": "text"
+				},
+				"first-name": {
+					"caption": "First Name",
+					"type": "text"
+				},
+				"last-name": {
+					"caption": "Last Name",
+					"type": "text"
+				}
+			}
+		},
+		"nba-player-split": {
+			"caption": "Player Split",
+			"type": "group",
+			"elements": {
+				"assist-rate": {
+					"caption": "Assist Rate",
+					"type": "number",
+					"field": "assist-rate"
+				},
+				"assists": {
+					"caption": "Assists",
+					"type": "group",
+					"elements": {
+						"assists": {
+							"caption": "Assists",
+							"type": "number"
+						},
+						"average": {
+							"caption": "Average",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"blocked-shots": {
+					"caption": "Blocked Shots",
+					"type": "group",
+					"elements": {
+						"average": {
+							"caption": "Average",
+							"type": "number"
+						},
+						"blocked-shots": {
+							"caption": "Blocked Shots",
+							"type": "number"
+						},
+						"blocks-received": {
+							"caption": "Blocks Received",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"double-doubles": {
+					"caption": "Double Doubles",
+					"type": "number",
+					"field": "number"
+				},
+				"ejections": {
+					"caption": "Ejections",
+					"type": "number",
+					"field": "ejections"
+				},
+				"field-goals" : {
+					"caption" : "Field Goals",
+					"type": "group",
+					"elements": {
+						"attempted": {
+							"caption": "Attempted",
+							"type": "number"
+						},
+						"made": {
+							"caption": "Made",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "Percentage",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"field-goals-at-rim" : {
+					"caption" : "Field Goals at Rim",
+					"type": "group",
+					"elements": {
+						"attempted": {
+							"caption": "Attempted",
+							"type": "number"
+						},
+						"made": {
+							"caption": "Made",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "Percentage",
+							"type": "number"
+						}
+					}
+				},
+				"field-goals-mid-range" : {
+					"caption" : "Field Goals Mid Range",
+					"type": "group",
+					"elements": {
+						"attempted": {
+							"caption": "Attempted",
+							"type": "number"
+						},
+						"made": {
+							"caption": "Made",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "Percentage",
+							"type": "number"
+						}
+					}
+				},
+				"flagrant-fouls" : {
+					"caption": "Flagrant Fouls",
+					"type": "number",
+					"field": "flagrant-fouls"
+				},
+				"free-throw-rate" : {
+					"caption": "Free Throw Rate",
+					"type": "number",
+					"field": "rate"
+				},
+				"free-throws" : {
+					"caption" : "Free Throws",
+					"type": "group",
+					"elements": {
+						"attempted": {
+							"caption": "Attempted",
+							"type": "number"
+						},
+						"made": {
+							"caption": "Made",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "Percentage",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"games" : {
+					"caption": "Games",
+					"type": "number",
+					"field": "games"
+				},
+				"high-game-points": {
+					"caption": "High Game Points",
+					"type": "number",
+					"field": "high-game-points"
+				},
+				"personal-fouls": {
+					"caption": "Personal Fouls",
+					"type": "group",
+					"elements": {
+						"disqualifications": {
+							"caption": "Disqualifications",
+							"type": "number"
+						},
+						"fouls": {
+							"caption": "Fouls",
+							"type": "number"
+						},
+						"fouls-received": {
+							"caption": "Fouls Received",
+							"type": "number"
+						},
+						"personal-fouls-average": {
+							"caption": "Personal Fouls Average",
+							"type": "number"
+						}
+					}
+				},
+				"player-efficiency-rating": {
+					"caption": "Player Efficiency Rating",
+					"type": "number",
+					"field": "rating"
+				},
+				"points" : {
+					"caption" : "Points",
+					"type": "group",
+					"elements": {
+						"average": {
+							"caption": "Average",
+							"type": "number"
+						},
+						"points": {
+							"caption": "Points",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"possessions": {
+					"caption": "Possessions",
+					"type": "number",
+					"field": "possessions"
+				},
+				"ratings" : {
+					"caption" : "Ratings",
+					"type": "group",
+					"elements": {
+						"defensive": {
+							"caption": "Defensive",
+							"type": "number"
+						},
+						"offensive": {
+							"caption": "Offensive",
+							"type": "number"
+						},
+						"total": {
+							"caption": "Total",
+							"type": "number"
+						}
+					}
+				},
+				"rebounds" : {
+					"caption" : "Rebounds",
+					"type": "group",
+					"elements": {
+						"defensive": {
+							"caption": "Defensive",
+							"type": "number"
+						},
+						"defensive-average": {
+							"caption": "Defensive Average",
+							"type": "number"
+						},
+						"offensive": {
+							"caption": "Offensive",
+							"type": "number"
+						},
+						"offensive-average": {
+							"caption": "Offensive Average",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						},
+						"total": {
+							"caption": "Total",
+							"type": "number"
+						},
+						"total-average": {
+							"caption": "Total Average",
+							"type": "number"
+						}
+					}
+				},
+				"steals" : {
+					"caption" : "Steals",
+					"type": "group",
+					"elements": {
+						"average": {
+							"caption": "Average",
+							"type": "number"
+						},
+						"steals": {
+							"caption": "Steals",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"three-point-field-goals" : {
+					"caption" : "Three Point Field Goals",
+					"type": "group",
+					"elements": {
+						"attempted": {
+							"caption": "Attempted",
+							"type": "number"
+						},
+						"made": {
+							"caption": "Made",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "Percentage",
+							"type": "number"
+						},
+						"qualifier": {
+							"caption": "Qualifier",
+							"type": "boolean"
+						}
+					}
+				},
+				"total-seconds": {
+					"caption": "Total Seconds",
+					"type": "number",
+					"field": "seconds"
+				},
+				"triple-doubles": {
+					"caption": "Triple Doubles",
+					"type": "number",
+					"field": "number"
+				},
+				"true-shooting-percentage": {
+					"caption": "True Shooting Percentage",
+					"type": "number",
+					"field": "percentage"
+				},
+				"turnover-rate": {
+					"caption": "Turnover Rate",
+					"type": "number",
+					"field": "turnover-rate"
+				},
+				"win-shares" : {
+					"caption" : "Win Shares",
+					"type": "group",
+					"elements": {
+						"defensive": {
+							"caption": "Defensive",
+							"type": "number"
+						},
+						"offensive": {
+							"caption": "Offensive",
+							"type": "number"
+						},
+						"total": {
+							"caption": "Total",
+							"type": "number"
+						}
+					}
+				}
+			}
+		},
+		"player-position": {
+			"caption": "Player Position",
+			"type": "group",
+			"elements": {
+				"position": {
+					"caption": "Position",
+					"type": "text"
+				},
+				"abbrev": {
+					"caption": "Abbreviation",
+					"type": "text"
+				}
+			}
+		},
+		"primary-position": {
+			"caption": "Primary Position",
+			"type": "text",
+			"field": "name"
+		},
+		"secondary-position": {
+			"caption": "Secondary Position",
+			"type": "text",
+			"field": "name"
+		}
+	}
+}

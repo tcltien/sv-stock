@@ -1,0 +1,377 @@
+{
+	"header": "NFL Teamstats",
+	"elements": {
+		"nfl-opponent-stats-passing": {
+			"caption": "NFL Opponent stats passing",
+			"type": "group",
+			"elements": {
+				"touchdowns": {
+					"caption": "Touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				},
+				"big-plays": {
+					"caption": "Big plays",
+					"type": "number",
+					"field": "plays"
+				},
+				"yards-after-catch": {
+					"caption": "Yards after catch",
+					"type": "number",
+					"field": "yards"
+				},
+				"first-downs": {
+					"caption": "First downs",
+					"type": "number",
+					"field": "first-downs"
+				},
+				"fumbles": {
+					"caption": "Fumbles",
+					"type": "number",
+					"field": "fumbles"
+				},
+				"completions": {
+					"caption": "Completions",
+					"type": "number",
+					"field": "completions"
+				},
+				"yard-300-games": {
+					"caption": "Yard 300 games",
+					"type": "number",
+					"field": "games"
+				},
+				"net-yards-per-pass-first-down": {
+					"caption": "Net yards per pass first down",
+					"type": "text",
+					"field": "yards-per-attempt"
+				},
+				"interceptions": {
+					"caption": "Interceptions",
+					"type": "number",
+					"field": "interceptions"
+				},
+				"long": {
+					"caption": "Long",
+					"type": "number",
+					"field": "long"
+				},
+				"yards": {
+					"caption": "Long",
+					"type": "group",
+					"elements": {
+						"yards-per-attempt": {
+							"caption": "yards per attempt",
+							"type": "text"
+						},
+						"yards-per-game": {
+							"caption": "yards per game",
+							"type": "text"
+						},
+						"yards": {
+							"caption": "yards",
+							"type": "number"
+						}
+					}
+				},
+				"qb-rating": {
+					"caption": "qb rating",
+					"type": "text",
+					"field": "rating"
+				},
+				"passing-yards-lost-to-penalties": {
+					"caption": "passing yards lost to penalties",
+					"type": "text",
+					"field": "yards"
+				},
+				"sacked": {
+					"caption": "Sacked",
+					"type": "group",
+					"elements": {
+						"sacked": {
+							"caption": "sacked",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "percentage",
+							"type": "text"
+						},
+						"yards": {
+							"caption": "yards",
+							"type": "number"
+						}
+					}
+				},
+				"net-yards-per-pass-third-down": {
+					"caption": "net yards per pass third down",
+					"type": "text",
+					"field": "yards-per-attempt"
+				},
+				"attempts": {
+					"caption": "Attempts",
+					"type": "number",
+					"field": "attempts"
+				}
+			}
+		},
+		"nfl-opponent-stats-rushing" : {
+			"caption": "NFL Opponent stats rushing",
+			"type": "group",
+			"elements": {
+				"touchdowns": {
+					"caption": "Touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				},
+				"big-plays": {
+					"caption": "Big plays",
+					"type": "number",
+					"field": "plays"
+				},
+				"first-downs": {
+					"caption": "First downs",
+					"type": "number",
+					"field": "first-downs"
+				},
+				"fumbles": {
+					"caption": "Fumbles",
+					"type": "number",
+					"field": "fumbles"
+				},
+				"long": {
+					"caption": "long",
+					"type": "number",
+					"field": "long"
+				},
+				"percent-rushes": {
+					"caption": "percent-rushes",
+					"type": "number",
+					"field": "percentage"
+				},
+				"yard-100-games": {
+					"caption": "Yard 100 games",
+					"type": "number",
+					"field": "games"
+				},
+				"yards": {
+					"caption": "Long",
+					"type": "group",
+					"elements": {
+						"yards-per-attempt": {
+							"caption": "yards per attempt",
+							"type": "text"
+						},
+						"yards-per-game": {
+							"caption": "yards per game",
+							"type": "text"
+						},
+						"yards": {
+							"caption": "yards",
+							"type": "number"
+						}
+					}
+				},
+				"rushing-yards-lost-to-penalties": {
+					"caption": "rushing yards lost to penalties",
+					"type": "text",
+					"field": "yards"
+				},
+				"stuffed": {
+					"caption": "Stuffed",
+					"type": "group",
+					"elements": {
+						"stuffed": {
+							"caption": "Stuffed",
+							"type": "number"
+						},
+						"percentage": {
+							"caption": "percentage",
+							"type": "text"
+						},
+						"yards": {
+							"caption": "yards",
+							"type": "number"
+						}
+					}
+				},
+				"attempts": {
+					"caption": "Attempts",
+					"type": "number",
+					"field": "attempts"
+				}
+			}
+		},
+		"nfl-opponent-stats-defense" : {
+			"caption": "NFL Opponent stats defense",
+			"type": "group",
+			"elements": {
+				"allowed": {
+					"caption": "Allowed",
+					"type": "group",
+					"elements" : {
+						"points-scored": {
+							"caption": "Points-scored",
+							"type": "number"
+						},
+						"touchdowns": {
+							"caption": "Touchdowns",
+							"type": "number"
+						}
+					}
+				},
+				"assists": {
+					"caption": "Assists",
+					"type": "number",
+					"field": "assists"
+				},
+				"fumble-recoveries": {
+					"caption": "Fumble-recoveries",
+					"type": "group",
+					"elements" : {
+						"recoveries": {
+							"caption": "Recoveries",
+							"type": "number"
+						},
+						"touchdowns": {
+							"caption": "Touchdowns",
+							"type": "number"
+						},
+						"yards": {
+							"caption": "Yards",
+							"type": "number"
+						}
+					}
+				},
+				"fumbles": {
+					"caption": "Fumbles",
+					"type": "number",
+					"field": "forced"
+				},
+				"interception-long": {
+					"caption": "Interception long",
+					"type": "group",
+					"elements" : {
+						"touchdown": {
+							"caption": "touchdown",
+							"type": "boolean"
+						},
+						"yards": {
+							"caption": "Yards",
+							"type": "number"
+						}
+					}
+				},
+				"interception-yards": {
+					"caption": "Interception yards",
+					"type": "group",
+					"field": "yards"
+				},
+				"interception": {
+					"caption": "Interception",
+					"type": "group",
+					"elements" : {
+						"touchdowns": {
+							"caption": "touchdowns",
+							"type": "number"
+						},
+						"interceptions": {
+							"caption": "Interceptions",
+							"type": "number"
+						}
+					}
+				},
+				"passes-defensed": {
+					"caption": "Passes defensed",
+					"type": "number",
+					"field": "passes"
+				},
+				"sack-yards": {
+					"caption": "Sack yards",
+					"type": "number",
+					"field": "yards"
+				},
+				"sacks": {
+					"caption": "Sacks",
+					"type": "number",
+					"field": "sacks"
+				},
+				"safeties": {
+					"caption": "Safeties",
+					"type": "number",
+					"field": "safeties"
+				},
+				"tackles": {
+					"caption": "Tackles",
+					"type": "number",
+					"field": "tackles"
+				},
+				"total-tackles": {
+					"caption": "Total tackles",
+					"type": "number",
+					"field": "tackles"
+				},
+				"touchdowns": {
+					"caption": "Touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				}
+			}
+		},
+		"nfl-opponent-stats-miscellaneous" : {
+			"caption": "NFL Opponent stats miscellaneous",
+			"type": "group",
+			"elements": {
+				"special-teams-tackles": {
+					"caption": "Special teams tackles",
+					"type": "number",
+					"field": "tackles"
+				},
+				"blocked-field-goal-touchdowns": {
+					"caption": "Blocked field goal touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				},
+				"blocked-punt-touchdowns": {
+					"caption": "Blocked punt touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				},
+				"misc-assists": {
+					"caption": "Misc assists",
+					"type": "number",
+					"field": "assists"
+				},
+				"misc-forced-fumbles": {
+					"caption": "Misc forced fumbles",
+					"type": "number",
+					"field": "forced-fumbles"
+				},
+				"special-teams-assists": {
+					"caption": "special teams assists",
+					"type": "number",
+					"field": "assists"
+				},
+				"blocked-kicks": {
+					"caption": "blocked-kicks",
+					"type": "number",
+					"field": "blocks"
+				},
+				"special-teams-forced-fumbles": {
+					"caption": "special teams forced fumbles",
+					"type": "number",
+					"field": "forced-fumbles"
+				},
+				"misc-touchdowns": {
+					"caption": "Misc touchdowns",
+					"type": "number",
+					"field": "touchdowns"
+				},
+				"misc-tackles": {
+					"caption": "misc-tackles",
+					"type": "number",
+					"field": "tackles"
+				}
+			}
+			
+		}
+	}
+}

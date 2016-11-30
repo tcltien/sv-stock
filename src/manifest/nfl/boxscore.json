@@ -1,0 +1,1299 @@
+{
+	"header": "NFL Boxscore",
+	"elements": {
+		"gamestate": {
+			"caption": "Game State",
+			"type": "group",
+			"elements": {
+				"minutes": {
+					"caption": "Minutes",
+					"type": "text"
+				},
+				"seconds": {
+					"caption": "Seconds",
+					"type": "text"
+				},
+				"distance": {
+					"caption": "Distance",
+					"type": "text"
+				},
+				"segment-number": {
+					"caption": "Segment Number",
+					"type": "number"
+				},
+				"active-state": {
+					"caption": "Active State",
+					"type": "boolean"
+				},
+				
+				"yards-from-goal": {
+					"caption": "Yards From Goal",
+					"type": "text"
+				},
+				"down": {
+					"caption": "Down",
+					"type": "number"
+				},
+				"status": {
+					"caption": "Status",
+					"type": "text"
+				}
+			}
+		},
+		"team-stats": {
+			"caption": "Team Stats",
+			"type": "group",
+			"elements": {
+				"visiting-team-stats" : {
+					"caption": "Visiting Team Stats",
+					"type": "group",
+					"elements" : {
+						"extra-points": {
+							"caption": "Extra Points",
+							"type": "group",
+							"elements" : {
+								"blocked": {
+									"caption": "Blocked",
+									"type": "number"
+								},
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"penalties": {
+							"caption": "Penalties",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "Number",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"first-downs": {
+							"caption": "First-downs",
+							"type": "group",
+							"elements" : {
+								"rushing": {
+									"caption": "Rushing",
+									"type": "number"
+								},
+								"number": {
+									"caption": "Number",
+									"type": "number"
+								},
+								"passing": {
+									"caption": "Passing",
+									"type": "number"
+								},
+								"penalty": {
+									"caption": "Penalty",
+									"type": "number"
+								}
+							}
+						},
+						"blocked-field-goals": {
+							"caption": "Blocked Field Goals",
+							"type": "group",
+							"elements" : {
+								"return-yards": {
+									"caption": "Return Yards",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"blocks": {
+									"caption": "Blocks",
+									"type": "number"
+								}
+							}
+						},
+						"time-of-possession": {
+							"caption": "Time Of Possession",
+							"type": "group",
+							"elements" : {
+								"seconds": {
+									"caption": "Seconds",
+									"type": "number"
+								},
+								"minutes": {
+									"caption": "Minutes",
+									"type": "number"
+								}
+							}
+						},
+						"safeties": {
+							"caption": "Safeties",
+							"type": "number",
+							"field" : "safeties"
+						},
+						"fourth-down-efficiency": {
+							"caption": "Fourth Down Efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"interception-returns": {
+							"caption": "Interception Returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"third-down-efficiency": {
+							"caption": "Third down efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"punting": {
+							"caption": "Punting",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "Average",
+									"type": "text"
+								},
+								"punts": {
+									"caption": "Punts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"blocked-punts": {
+							"caption": "Blocked punts",
+							"type": "group",
+							"elements" : {
+								"return-yards": {
+									"caption": "Return yards",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"blocks": {
+									"caption": "Blocks",
+									"type": "number"
+								}
+							}
+						},
+						"defense": {
+							"caption": "Defense",
+							"type": "group",
+							"elements" : {
+								"assists": {
+									"caption": "Assists",
+									"type": "number"
+								},
+								"forced-fumbles": {
+									"caption": "Forced fumbles",
+									"type": "number"
+								},
+								"sack-yards": {
+									"caption": "Sack yards",
+									"type": "number"
+								},
+								"stuffs": {
+									"caption": "Stuffs",
+									"type": "number"
+								},
+								"tackles": {
+									"caption": "Tackles",
+									"type": "number"
+								},
+								"stuff-yards": {
+									"caption": "Stuff yards",
+									"type": "number"
+								},
+								"sacks": {
+									"caption": "Sacks",
+									"type": "number"
+								},
+								"passes-defensed": {
+									"caption": "Passes defensed",
+									"type": "number"
+								}
+							}
+						},
+						"punt-returns": {
+							"caption": "Punt Returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"opponent-fumbles": {
+							"caption": "Opponent fumbles",
+							"type": "group",
+							"elements" : {
+								"recovered": {
+									"caption": "Recovered",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"kick-returns": {
+							"caption": "Kick returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"game-totals": {
+							"caption": "Game totals",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"touchdowns": {
+									"caption": "touchdowns",
+									"type": "number"
+								},
+								"plays": {
+									"caption": "plays",
+									"type": "number"
+								},
+								"net-yards": {
+									"caption": "Net yards",
+									"type": "number"
+								}
+							}
+						},
+						"fumbles": {
+							"caption": "Fumbles",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "number",
+									"type": "number"
+								},
+								"own-rec-tds": {
+									"caption": "own rec tds",
+									"type": "number"
+								},
+								"lost": {
+									"caption": "lost",
+									"type": "number"
+								},
+								"own-recovered": {
+									"caption": "own-recovered",
+									"type": "number"
+								},
+								"own-rec-yards": {
+									"caption": "own-rec-yards",
+									"type": "number"
+								}
+							}
+						},
+						"red-zone-efficiency": {
+							"caption": "Red zone efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"goal-to-go-efficiency": {
+							"caption": "goal-to-go-efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"return-totals": {
+							"caption": "return-totals",
+							"type": "group",
+							"elements" : {
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "yards",
+									"type": "number"
+								}
+							}
+						},
+						"rushing": {
+							"caption": "rushing",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "yards",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals": {
+							"caption": "field-goals",
+							"type": "group",
+							"elements" : {
+								"blocked": {
+									"caption": "blocked",
+									"type": "number"
+								},
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"long": {
+									"caption": "long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+								
+							}
+						},
+						"kickoffs": {
+							"caption": "kickoffs",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "number",
+									"type": "number"
+								},
+								"touchbacks": {
+									"caption": "touchbacks",
+									"type": "number"
+								},
+								"end-zone": {
+									"caption": "end-zone",
+									"type": "number"
+								}
+							}
+						},
+						"passing": {
+							"caption": "passing",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"sacked": {
+									"caption": "sacked",
+									"type": "number"
+								},
+								"completions": {
+									"caption": "completions",
+									"type": "number"
+								},
+								"net-yards": {
+									"caption": "net-yards",
+									"type": "number"
+								},
+								"interceptions": {
+									"caption": "interceptions",
+									"type": "number"
+								},
+								"yards-lost": {
+									"caption": "yards-lost",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"two-point-conversions": {
+							"caption": "two-point-conversions",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "text"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						}
+					}
+				},
+				"home-team-stats" : {
+					"caption": "Home Team Stats",
+					"type": "group",
+					"elements" : {
+						"extra-points": {
+							"caption": "Extra Points",
+							"type": "group",
+							"elements" : {
+								"blocked": {
+									"caption": "Blocked",
+									"type": "number"
+								},
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"penalties": {
+							"caption": "Penalties",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "Number",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"first-downs": {
+							"caption": "First-downs",
+							"type": "group",
+							"elements" : {
+								"rushing": {
+									"caption": "Rushing",
+									"type": "number"
+								},
+								"number": {
+									"caption": "Number",
+									"type": "number"
+								},
+								"passing": {
+									"caption": "Passing",
+									"type": "number"
+								},
+								"penalty": {
+									"caption": "Penalty",
+									"type": "number"
+								}
+							}
+						},
+						"blocked-field-goals": {
+							"caption": "Blocked Field Goals",
+							"type": "group",
+							"elements" : {
+								"return-yards": {
+									"caption": "Return Yards",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"blocks": {
+									"caption": "Blocks",
+									"type": "number"
+								}
+							}
+						},
+						"time-of-possession": {
+							"caption": "Time Of Possession",
+							"type": "group",
+							"elements" : {
+								"seconds": {
+									"caption": "Seconds",
+									"type": "number"
+								},
+								"minutes": {
+									"caption": "Minutes",
+									"type": "number"
+								}
+							}
+						},
+						"safeties": {
+							"caption": "Safeties",
+							"type": "number",
+							"field" : "safeties"
+						},
+						"fourth-down-efficiency": {
+							"caption": "Fourth Down Efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"interception-returns": {
+							"caption": "Interception Returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"third-down-efficiency": {
+							"caption": "Third down efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "Percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "Made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								}
+							}
+						},
+						"punting": {
+							"caption": "Punting",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "Average",
+									"type": "text"
+								},
+								"punts": {
+									"caption": "Punts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"blocked-punts": {
+							"caption": "Blocked punts",
+							"type": "group",
+							"elements" : {
+								"return-yards": {
+									"caption": "Return yards",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"blocks": {
+									"caption": "Blocks",
+									"type": "number"
+								}
+							}
+						},
+						"defense": {
+							"caption": "Defense",
+							"type": "group",
+							"elements" : {
+								"assists": {
+									"caption": "Assists",
+									"type": "number"
+								},
+								"forced-fumbles": {
+									"caption": "Forced fumbles",
+									"type": "number"
+								},
+								"sack-yards": {
+									"caption": "Sack yards",
+									"type": "number"
+								},
+								"stuffs": {
+									"caption": "Stuffs",
+									"type": "number"
+								},
+								"tackles": {
+									"caption": "Tackles",
+									"type": "number"
+								},
+								"stuff-yards": {
+									"caption": "Stuff yards",
+									"type": "number"
+								},
+								"sacks": {
+									"caption": "Sacks",
+									"type": "number"
+								},
+								"passes-defensed": {
+									"caption": "Passes defensed",
+									"type": "number"
+								}
+							}
+						},
+						"punt-returns": {
+							"caption": "Punt Returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"opponent-fumbles": {
+							"caption": "Opponent fumbles",
+							"type": "group",
+							"elements" : {
+								"recovered": {
+									"caption": "Recovered",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"kick-returns": {
+							"caption": "Kick returns",
+							"type": "group",
+							"elements" : {
+								"long-TD": {
+									"caption": "Long-TD",
+									"type": "number"
+								},
+								"tds": {
+									"caption": "Tds",
+									"type": "number"
+								},
+								"long": {
+									"caption": "Long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "Attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "Yards",
+									"type": "number"
+								}
+							}
+						},
+						"game-totals": {
+							"caption": "Game totals",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"touchdowns": {
+									"caption": "touchdowns",
+									"type": "number"
+								},
+								"plays": {
+									"caption": "plays",
+									"type": "number"
+								},
+								"net-yards": {
+									"caption": "Net yards",
+									"type": "number"
+								}
+							}
+						},
+						"fumbles": {
+							"caption": "Fumbles",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "number",
+									"type": "number"
+								},
+								"own-rec-tds": {
+									"caption": "own rec tds",
+									"type": "number"
+								},
+								"lost": {
+									"caption": "lost",
+									"type": "number"
+								},
+								"own-recovered": {
+									"caption": "own-recovered",
+									"type": "number"
+								},
+								"own-rec-yards": {
+									"caption": "own-rec-yards",
+									"type": "number"
+								}
+							}
+						},
+						"red-zone-efficiency": {
+							"caption": "Red zone efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"goal-to-go-efficiency": {
+							"caption": "goal-to-go-efficiency",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"return-totals": {
+							"caption": "return-totals",
+							"type": "group",
+							"elements" : {
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "yards",
+									"type": "number"
+								}
+							}
+						},
+						"rushing": {
+							"caption": "rushing",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								},
+								"yards": {
+									"caption": "yards",
+									"type": "number"
+								}
+							}
+						},
+						"field-goals": {
+							"caption": "field-goals",
+							"type": "group",
+							"elements" : {
+								"blocked": {
+									"caption": "blocked",
+									"type": "number"
+								},
+								"percent": {
+									"caption": "percent",
+									"type": "number"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"long": {
+									"caption": "long",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+								
+							}
+						},
+						"kickoffs": {
+							"caption": "kickoffs",
+							"type": "group",
+							"elements" : {
+								"number": {
+									"caption": "number",
+									"type": "number"
+								},
+								"touchbacks": {
+									"caption": "touchbacks",
+									"type": "number"
+								},
+								"end-zone": {
+									"caption": "end-zone",
+									"type": "number"
+								}
+							}
+						},
+						"passing": {
+							"caption": "passing",
+							"type": "group",
+							"elements" : {
+								"average": {
+									"caption": "average",
+									"type": "text"
+								},
+								"tds": {
+									"caption": "tds",
+									"type": "number"
+								},
+								"sacked": {
+									"caption": "sacked",
+									"type": "number"
+								},
+								"completions": {
+									"caption": "completions",
+									"type": "number"
+								},
+								"net-yards": {
+									"caption": "net-yards",
+									"type": "number"
+								},
+								"interceptions": {
+									"caption": "interceptions",
+									"type": "number"
+								},
+								"yards-lost": {
+									"caption": "yards-lost",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						},
+						"two-point-conversions": {
+							"caption": "two-point-conversions",
+							"type": "group",
+							"elements" : {
+								"percent": {
+									"caption": "percent",
+									"type": "text"
+								},
+								"made": {
+									"caption": "made",
+									"type": "number"
+								},
+								"attempts": {
+									"caption": "attempts",
+									"type": "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"home-team": {
+			"caption": "Home Team",
+			"type": "group",
+			"elements": {
+				"linescore": {
+					"type": "group",
+					"caption": "Linescore",
+					"elements": {
+						"quarter": {
+							"type": "table",
+							"caption": "Quarter",
+							"identifier": ["quarter"],
+							"elements": {
+								"score": {
+									"caption": "Score",
+									"type": "text"
+								}
+							}
+						},
+						"score": {
+							"caption": "score",
+							"type": "number"
+						}
+					}
+				}
+
+			}
+		},
+		"outcome-home": {
+			"caption": "Outcome Home",
+			"type": "text",
+			"field": "outcome"
+		},
+		
+		"visiting-score": {
+			"caption": "Visiting Score",
+			"type": "table",
+			"identifier": ["type"],
+			"elements": {
+				"number": {
+					"caption": "Number",
+					"type": "number"
+				}
+			}
+		},
+		"visiting-team": {
+			"caption": "Visiting Team",
+			"type": "group",
+			"elements": {
+				"linescore": {
+					"type": "group",
+					"caption": "Linescore",
+					"elements": {
+						"quarter": {
+							"type": "table",
+							"caption": "Quarter",
+							"identifier": ["quarter"],
+							"elements": {
+								"score": {
+									"caption": "Score",
+									"type": "text"
+								}
+							}
+						},
+						"score": {
+							"caption": "score",
+							"type": "number"
+						}
+					}
+				}
+
+			}
+		},
+		"outcome-visit": {
+			"caption": "Outcome Visiting",
+			"type": "text",
+			"field": "outcome"
+		},
+		"player-stats": {
+			"caption": "Player stats",
+			"type": "group",
+			"elements": {
+				"visiting-player-stats": {
+					"type": "group",
+					"caption": "Visiting player stats",
+					"elements": {
+						"receiving": {
+							"type": "list",
+							"caption": "Receiving",
+							"identifier": ["name","display-name"],
+							"elements": {
+								"tds": {
+									"caption": "tds",
+									"type": "text"
+								},
+								"first-downs" : {
+									"caption": "first-downs",
+									"type": "text"
+								},
+								"fumbles" : {
+									"caption": "fumbles",
+									"type": "text"
+								},
+								"long-TD" : {
+									"caption": "long-TD",
+									"type": "boolean"
+								},
+								"targets" : {
+									"caption": "targets",
+									"type": "text"
+								},
+								"long" : {
+									"caption": "long",
+									"type": "number"
+								},
+								"yards" : {
+									"caption": "yards",
+									"type": "number"
+								},
+								"uniform" : {
+									"caption": "uniform",
+									"type": "text",
+									"field" : "number"
+								},
+								"receptions" : {
+									"caption": "receptions",
+									"type": "number"
+								},
+								"fumbles-lost" : {
+									"caption": "fumbles-lost",
+									"type": "text"
+								}
+							}
+						}
+					}
+				},
+				"home-player-stats": {
+					"type": "group",
+					"caption": "Home player stats",
+					"elements": {
+						"receiving": {
+							"type": "list",
+							"caption": "Receiving",
+							"identifier": ["name","display-name"],
+							"elements": {
+								"tds": {
+									"caption": "tds",
+									"type": "text"
+								},
+								"first-downs" : {
+									"caption": "first-downs",
+									"type": "text"
+								},
+								"fumbles" : {
+									"caption": "fumbles",
+									"type": "text"
+								},
+								"long-TD" : {
+									"caption": "long-TD",
+									"type": "boolean"
+								},
+								"targets" : {
+									"caption": "targets",
+									"type": "text"
+								},
+								"long" : {
+									"caption": "long",
+									"type": "number"
+								},
+								"yards" : {
+									"caption": "yards",
+									"type": "number"
+								},
+								"uniform" : {
+									"caption": "uniform",
+									"type": "text",
+									"field" : "number"
+								},
+								"receptions" : {
+									"caption": "receptions",
+									"type": "number"
+								},
+								"fumbles-lost" : {
+									"caption": "fumbles-lost",
+									"type": "text"
+								}
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

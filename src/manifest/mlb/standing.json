@@ -1,0 +1,148 @@
+{
+	"header": "MLB Standing",
+	"elements": {
+		"baseball-mlb-league-standings": {
+			"caption": "MLB League",
+			"identifier": ["league"],
+			"type": "list",
+			"elements": {
+				"baseball-mlb-division-standings": {
+					"caption": "MLB Division",
+					"identifier": ["division"],
+					"type": "list",
+					"elements": {
+						"baseball-mlb-team-standings": {
+							"caption": "MLB Team ",
+							"type": "list",
+							"identifier": ["team-name",
+							"name"],
+							"elements": {
+								"clinched-division": {
+									"caption": "Clinched Division",
+									"type": "boolean",
+									"field": "clinched"
+								},
+								"clinched-playoff-spot": {
+									"caption": "Clinched Playoff",
+									"type": "boolean",
+									"field": "clinched"
+								},
+								"division-rank": {
+									"caption": "Division Rank",
+									"type": "text",
+									"field": "rank"
+								},
+								"eliminated-from-playoffs": {
+									"caption": "Eliminated From Playoff",
+									"type": "text",
+									"field": "eliminated"
+								},
+								"elimination-number": {
+									"caption": "Elimination Number",
+									"type": "text",
+									"field": "number"
+								},
+								"games-back": {
+									"caption": "Game back",
+									"type": "text",
+									"field": "number"
+								},
+								"losses": {
+									"caption": "Game Losses",
+									"type": "text",
+									"field": "number"
+								},
+								"runs": {
+									"caption": "Runs",
+									"type": "group",
+									"elements": {
+										"allowed": {
+											"caption": "Allowed",
+											"type": "text"
+										},
+										"scored": {
+											"caption": "Scored",
+											"type": "text"
+										}
+									}
+								},
+								"streak": {
+									"caption": "Streak",
+									"type": "group",
+									"elements": {
+										"games": {
+											"caption": "Games",
+											"type": "text"
+										},
+										"kind": {
+											"caption": "Kind",
+											"type": "text"
+										}
+									}
+								},
+								"today-games-included": {
+									"caption": "Today Game Include",
+									"type": "boolean",
+									"field": "through"
+								},
+								"wc-elimination-number": {
+									"caption": "Wild Card Elimination Number",
+									"type": "text",
+									"field": "number"
+								},
+								"wc-games-back": {
+									"caption": "Wild Card Game Back",
+									"type": "text",
+									"field": "number"
+								},
+								"wild-card-rank": {
+									"caption": "Wild Card Rank",
+									"type": "group",
+									"elements": {
+										"rank": {
+											"caption": "Rank",
+											"type": "text"
+										},
+										"tied": {
+											"caption": "Tied",
+											"type": "boolean"
+										}
+									}
+								},
+								"win-loss-record": {
+									"caption": "Win Loss Record",
+									"type": "table",
+									"identifier": ["name"],
+									"elements": {
+										"wins": {
+											"caption": "Wins",
+											"type": "number"
+										},
+										"losses": {
+											"caption": "Losses",
+											"type": "number"
+										},
+										"type": {
+											"caption": "Type",
+											"type": "text"
+										}
+									}
+								},
+								"winning-percentage": {
+									"caption": "WinningPercentage",
+									"type": "text",
+									"field": "percentage"
+								},
+								"wins": {
+									"caption": "Wins",
+									"type": "text",
+									"field": "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
