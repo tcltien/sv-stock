@@ -1,0 +1,41 @@
+["10|1482117054901|10:10:54|BVH|Tập đoàn Bảo Việt |S|33343100.2|16266945.1|58.6|59.3|0|0|0|61|59.3|62.7|54.5|0|0|61|41|2501|0|60.7|52|60.6|267|60.5|468|61|286|61.3|253|61.5|488|5.629|9341|1000|400|59.3|27222|"]
+
+
+
+
+9: TC (Gia tham chieu)
+16: Tran (Gia Tran CE)
+17: San ( Gia San FL)
+20: Khop Lenh Gia
+21: Khop Lenh KL
++/0 : Gia Khop Lenh - Gia tham chieu (TC)
+
+24: Mua Gia 1
+25: KL 1
+26: Mua Gia 2
+27: KL 2
+28: Mua Gia 3
+29: KL 3
+
+30: Ban Gia 3
+31: KL 1
+32: Ban Gia 2
+33: KL 2
+34: Mua Gia 3
+35: Ban 3
+
+36: Gia tri
+37: Tong KL
+
+
+
+
+
+
+
+
+
+
+
+
+Tong KL: ke cuoi

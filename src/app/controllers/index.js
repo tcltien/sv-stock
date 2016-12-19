@@ -23,7 +23,7 @@ var fs = require('fs');
 var path = require('path');
 var basepath = path.dirname(process.mainModule.filename);
 var sportdata = require('../../manifest/sports.json');
-
+var test = require('../../manifest/test.txt');
 /**
  * Index page
  * @public
@@ -33,10 +33,19 @@ var sportdata = require('../../manifest/sports.json');
 exports.index = function(req, res) {
     logger.info('Index page start..........');
 	logger.debug('Render index.html');
-	logger.debug(sportdata);
-	res.render('index.html', {
-		sports : Buffer.from(JSON.stringify(sportdata)).toString('base64')
+	
+	fs.readFile('/MEAN/sv-stock/src/manifest/test.txt', 'utf8', function (err,data) {
+	  	if (err) {
+	    	return console.log(err);
+	  	}	 
+	  	res.render('index.html', {
+			sports : Buffer.from(JSON.stringify(sportdata)).toString('base64'),
+			data : Buffer.from(data).toString('base64')
+		});
+		 
 	});
+ 
+	
 };
 
 exports.listIds = function(req, res) {
