@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 'use strict';
 // var config = require('../../config/config');
 // var logger = require('winston').loggers.get('application');
@@ -6,8 +5,6 @@
 // var ottoman = require('ottoman');
 // var bucket = require('../../config/express').couchbaseBucket();
 // ottoman.bucket = bucket;
-=======
->>>>>>> 6d359e88655b2495cc95781c23f578109d4a1b6a
 
 
 // var BoxscoreService = ottoman.model('Boxscore', {

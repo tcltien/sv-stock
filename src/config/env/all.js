@@ -47,7 +47,7 @@ module.exports = {
 	/* Admin User */
 	user : {
 		username : 'admin', 
-		passwd : '123456'
+		passwd : 'admin'
 	},
 	
     /** REST API **/

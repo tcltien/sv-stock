@@ -33,7 +33,7 @@ var sportdata = require('../../manifest/sports.json');
 exports.index = function(req, res) {
     logger.info('Index page start..........');
 	logger.debug('Render index.html');
-
+	logger.debug(sportdata);
 	res.render('index.html', {
 		sports : Buffer.from(JSON.stringify(sportdata)).toString('base64')
 	});
