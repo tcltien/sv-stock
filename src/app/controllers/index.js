@@ -1,15 +1,3 @@
-/*
- * index.js - Controller for index page.
- *
- * Copyright (c) 2016 DIRECTV, Inc.
- * An Unpublished Work.  All Rights Reserved.
- *
- * DIRECTV PROPRIETARY:  The information contained in or disclosed by this
- * document is considered proprietary by DIRECTV, Inc.  This document and/or the
- * information contained therein shall not be duplicated nor disclosed in whole
- * or in part without the specific written permission of DIRECTV, Inc.
- */
-
 'use strict';
 
 /**
@@ -24,6 +12,9 @@ var path = require('path');
 var basepath = path.dirname(process.mainModule.filename);
 var sportdata = require('../../manifest/sports.json');
 var test = require('../../manifest/test.txt');
+var Client = require('node-rest-client').Client;
+var Stock = require('../models/Stock');
+var restClient = new Client();
 /**
  * Index page
  * @public
@@ -32,17 +23,35 @@ var test = require('../../manifest/test.txt');
  */
 exports.index = function(req, res) {
     logger.info('Index page start..........');
+<<<<<<< HEAD
 	logger.debug('Render index.html');
 	fs.readFile(basepath + '/manifest/test.txt', 'utf8', function (err,data) {
+=======
+	logger.debug('Render index.html');	
+	// direct way 
+
+	//setInterval(function() {
+	   	var res1 = restClient.get("https://priceservice.vndirect.com.vn/priceservice/secinfo/snapshot/q=codes:BVH,CII,CSM,CTG,DPM,EIB,FLC,FPT,GMD,HAG,HCM,HHS,HPG,HSG,HVG,ITA,KBC,KDC,MBB,MSN,PPC,PVD,PVT,REE,SSI,STB,VCB,VIC,VND,VNM,VSH", function (data, response) {
+	    // parsed response body as js object 
+	   	// console.log(data);
+	    parseStockDataWithCode(data);
+	    // raw response 
+	    //console.log(response);
+		});
+  	//}, 1000);
+	
+	
+	fs.readFile('/MEAN/sv-stock/src/manifest/test.txt', 'utf8', function (err,data) {
+>>>>>>> d9e6bb7943993843a67e6a67dfa69e6559d62e25
 	  	if (err) {
 	    	return console.log(err);
 	  	}	 
 	  	res.render('index.html', {
 			sports : Buffer.from(JSON.stringify(sportdata)).toString('base64'),
 			data : Buffer.from(data).toString('base64')
-		});
-		 
+		});		 
 	});
+
  
 	
 };
@@ -127,4 +136,97 @@ var executeService = function(service, res, params) {
 			res.json([]);
 		}
 	}.bind({service : service}));
+}
+
+
+var parseStockDataWithCode = function (data) {	
+	logger.info("Begin Parser");
+	var stockArray = new Array();
+	for (var j in data) {
+		console.log(j);
+		var tmpData = data[j].split("|");
+		stockArray.push(parseEachStock(tmpData));
+	}
+	console.log(stockArray);
+}
+
+function parseEachStock(data) {
+	var stock = new Stock();
+	for (var i in data) {	
+		switch(i) {
+			case "9":
+				console.log("TC");		
+				stock.TC = data[9];		
+				break;
+			case "16":
+				console.log("CE");				
+				break;
+			case "17":
+				console.log("FL");				
+				break;
+			case "20":
+				console.log("Khop Lenh Gia");
+				
+				break;
+			case "21":
+				console.log("Khop Lenh KL");
+				
+				break;
+			case "24":
+				console.log("Mua Gia 1");
+				
+				break;
+			case "25":
+				console.log("KL 1");
+				
+				break;
+			case "26":
+				console.log("M Gia 2");
+				
+				break;
+			case "28":
+				console.log("Mua Gia 3");
+				
+				break;
+			case "29":
+				console.log("KL 3");
+				
+				break;
+			case "30":
+				console.log("Ban Gia 1");
+				
+				break;
+			case "31":
+				console.log("KL 1");
+				
+				break;
+			case "32":
+				console.log("M Gia 2");
+				
+				break;
+			case "33":
+				console.log("KL 2");
+				
+				break;
+			case "34":
+				console.log("Mua Gia 3");
+				
+				break;
+			case "35":
+				console.log("KL 3");
+				
+				break;
+			case "36":
+				console.log("gIA TRI");
+				
+				break;
+			case "37":
+				console.log("Tong KL");
+				
+				break;
+			default:
+				break;
+		}
+	}
+	return stock;
 }

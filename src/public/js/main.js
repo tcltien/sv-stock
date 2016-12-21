@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;(function () {
 	
 	'use strict';
@@ -20,6 +21,49 @@
 		},
 			any: function() {
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+=======
+/**
+ * Main script for client side
+ */
+// Create Base64 Object
+var manifest = null;
+var couchbaseData = null;
+
+$(document).ready(function(){
+	// load sports to selectbox 	
+	// for (var i in sportdata) {
+	// 	$('#sport').append('<option value="' +sportdata[i].name.toLowerCase() + '">' + sportdata[i].name + '</option>');
+	// }
+	//console.log(data);
+});
+
+$(document).on('click', '.minimize-btn', function(){
+	if ($(this).hasClass('open')){
+		$(this).text('+');
+		$(this).siblings('.group,.element,.table-element').addClass('hidden');
+		$(this).removeClass('open');
+	}else {
+		$(this).siblings('.group,.element,.table-element').removeClass('hidden');
+		$(this).text('-');
+		$(this).addClass('open');
+	}
+});
+
+
+$(document).on('change', '#sport', function(){
+	$('#data-file').empty();
+	$('#data-file').val('');
+	$('#data-file').append('<option value="0">Select data</option>');
+	$("#boxscore-ids option:not(:first)").remove();
+	$('#manifest-editor').html("");
+	$('#save-btn').addClass('hidden');
+	for(var i in sportdata) {
+		if (sportdata[i].name.toLowerCase() == $(this).val()) {			
+			for (var j in sportdata[i].structure) {
+				var s = sportdata[i].structure[j];
+				$('#data-file').append('<option value="' +s.name.toLowerCase() + '">' + s.name + '</option>');
+			}
+>>>>>>> d9e6bb7943993843a67e6a67dfa69e6559d62e25
 		}
 	};
 
