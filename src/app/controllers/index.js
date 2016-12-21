@@ -33,8 +33,7 @@ var test = require('../../manifest/test.txt');
 exports.index = function(req, res) {
     logger.info('Index page start..........');
 	logger.debug('Render index.html');
-	
-	fs.readFile('/MEAN/sv-stock/src/manifest/test.txt', 'utf8', function (err,data) {
+	fs.readFile(basepath + '/manifest/test.txt', 'utf8', function (err,data) {
 	  	if (err) {
 	    	return console.log(err);
 	  	}	 
