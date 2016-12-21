@@ -24,6 +24,10 @@ var path = require('path');
 var basepath = path.dirname(process.mainModule.filename);
 var sportdata = require('../../manifest/sports.json');
 var test = require('../../manifest/test.txt');
+var Client = require('node-rest-client').Client;
+
+var restClient = new Client();
+var BaseService = require('../services/BaseService');
 /**
  * Index page
  * @public
@@ -32,7 +36,19 @@ var test = require('../../manifest/test.txt');
  */
 exports.index = function(req, res) {
     logger.info('Index page start..........');
-	logger.debug('Render index.html');
+	logger.debug('Render index.html');	
+	// direct way 
+
+	//setInterval(function() {
+	   	var res1 = restClient.get("https://priceservice.vndirect.com.vn/priceservice/secinfo/snapshot/q=codes:BVH,CII,CSM,CTG,DPM,EIB,FLC,FPT,GMD,HAG,HCM,HHS,HPG,HSG,HVG,ITA,KBC,KDC,MBB,MSN,PPC,PVD,PVT,REE,SSI,STB,VCB,VIC,VND,VNM,VSH", function (data, response) {
+	    // parsed response body as js object 
+	   	// console.log(data);
+	    parseStockDataWithCode(data);
+	    // raw response 
+	    //console.log(response);
+		});
+  	//}, 1000);
+	
 	
 	fs.readFile('/MEAN/sv-stock/src/manifest/test.txt', 'utf8', function (err,data) {
 	  	if (err) {
@@ -41,9 +57,9 @@ exports.index = function(req, res) {
 	  	res.render('index.html', {
 			sports : Buffer.from(JSON.stringify(sportdata)).toString('base64'),
 			data : Buffer.from(data).toString('base64')
-		});
-		 
+		});		 
 	});
+
  
 	
 };
@@ -128,4 +144,88 @@ var executeService = function(service, res, params) {
 			res.json([]);
 		}
 	}.bind({service : service}));
+}
+
+
+var parseStockDataWithCode = function (data) {		
+	for (var j in data) {
+		console.log(j);
+		var tmpData = data[j].split("|");
+		for (var i in tmpData) {	
+			switch(i) {
+				case "9":
+					console.log("TC");				
+					break;
+				case "16":
+					console.log("CE");				
+					break;
+				case "17":
+					console.log("FL");				
+					break;
+				case "20":
+					console.log("Khop Lenh Gia");
+					
+					break;
+				case "21":
+					console.log("Khop Lenh KL");
+					
+					break;
+				case "24":
+					console.log("Mua Gia 1");
+					
+					break;
+				case "25":
+					console.log("KL 1");
+					
+					break;
+				case "26":
+					console.log("M Gia 2");
+					
+					break;
+				case "28":
+					console.log("Mua Gia 3");
+					
+					break;
+				case "29":
+					console.log("KL 3");
+					
+					break;
+				case "30":
+					console.log("Ban Gia 1");
+					
+					break;
+				case "31":
+					console.log("KL 1");
+					
+					break;
+				case "32":
+					console.log("M Gia 2");
+					
+					break;
+				case "33":
+					console.log("KL 2");
+					
+					break;
+				case "34":
+					console.log("Mua Gia 3");
+					
+					break;
+				case "35":
+					console.log("KL 3");
+					
+					break;
+				case "36":
+					console.log("gIA TRI");
+					
+					break;
+				case "37":
+					console.log("Tong KL");
+					
+					break;
+				default:
+					break;
+			}
+
+		}	
+	}
 }

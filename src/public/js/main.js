@@ -10,7 +10,7 @@ $(document).ready(function(){
 	// for (var i in sportdata) {
 	// 	$('#sport').append('<option value="' +sportdata[i].name.toLowerCase() + '">' + sportdata[i].name + '</option>');
 	// }
-	console.log(data);
+	//console.log(data);
 });
 
 $(document).on('click', '.minimize-btn', function(){

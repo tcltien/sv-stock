@@ -19,7 +19,6 @@ class BaseService {
 	constructor() {
 	}
 
-	
 	/**
 	 * Find records from couchbase by query string
 	 * @param q 	conditions where clause
