@@ -23,15 +23,12 @@ var restClient = new Client();
  */
 exports.index = function(req, res) {
     logger.info('Index page start..........');
-<<<<<<< HEAD
 	logger.debug('Render index.html');
-	fs.readFile(basepath + '/manifest/test.txt', 'utf8', function (err,data) {
-=======
-	logger.debug('Render index.html');	
+	
 	// direct way 
 
 	//setInterval(function() {
-	   	var res1 = restClient.get("https://priceservice.vndirect.com.vn/priceservice/secinfo/snapshot/q=codes:BVH,CII,CSM,CTG,DPM,EIB,FLC,FPT,GMD,HAG,HCM,HHS,HPG,HSG,HVG,ITA,KBC,KDC,MBB,MSN,PPC,PVD,PVT,REE,SSI,STB,VCB,VIC,VND,VNM,VSH", function (data, response) {
+	   	var res1 = restClient.get("https://priceservice.vndirect.com.vn/priceservice/secinfo/snapshot/q=codes:BVH", function (data, response) {
 	    // parsed response body as js object 
 	   	// console.log(data);
 	    parseStockDataWithCode(data);
@@ -41,13 +38,12 @@ exports.index = function(req, res) {
   	//}, 1000);
 	
 	
-	fs.readFile('/MEAN/sv-stock/src/manifest/test.txt', 'utf8', function (err,data) {
->>>>>>> d9e6bb7943993843a67e6a67dfa69e6559d62e25
+	fs.readFile(basepath + '/manifest/test.txt', 'utf8', function (err,data) {
 	  	if (err) {
 	    	return console.log(err);
 	  	}	 
 	  	res.render('index.html', {
-			sports : Buffer.from(JSON.stringify(sportdata)).toString('base64'),
+			sports : Buffer.from(JSON.stringify("")).toString('base64'),
 			data : Buffer.from(data).toString('base64')
 		});		 
 	});

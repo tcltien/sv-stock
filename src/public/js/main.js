@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-;(function () {
-	
-	'use strict';
-
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-=======
-/**
- * Main script for client side
- */
 // Create Base64 Object
 var manifest = null;
 var couchbaseData = null;
@@ -63,7 +36,6 @@ $(document).on('change', '#sport', function(){
 				var s = sportdata[i].structure[j];
 				$('#data-file').append('<option value="' +s.name.toLowerCase() + '">' + s.name + '</option>');
 			}
->>>>>>> d9e6bb7943993843a67e6a67dfa69e6559d62e25
 		}
 	};
 
