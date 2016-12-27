@@ -43,7 +43,7 @@ exports.index = function(req, res) {
 	    	return console.log(err);
 	  	}	 
 	  	res.render('index.html', {
-			sports : Buffer.from(JSON.stringify("")).toString('base64'),
+			sports : Buffer.from(JSON.stringify(sportdata)).toString('base64'),
 			data : Buffer.from(data).toString('base64')
 		});		 
 	});
