@@ -2,6 +2,7 @@
 var logger = require('winston').loggers.get('application');
 
 function Stock() {
+	this.CODE = "";
 	this.TC = "";
 	this.CE = "";
 	this.FL = "";
